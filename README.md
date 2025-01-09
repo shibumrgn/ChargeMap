@@ -2,18 +2,27 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-To run this project using Docker, follow these steps:
+To run this project using Docker Compose, follow these steps:
 
-1. Build the Docker image:
+1. Create a `.env` file in the root directory of your project and add your environment variables:
 
-   ```bash
-   docker build -t charge_map .
+   ```env
+   # Example environment variables
+    BASE_API_URL=/
+    ACCESS_KEY=/
+
    ```
 
-2. Run the Docker container:
+2. Build the Docker image without using the cache:
 
    ```bash
-   docker run -p 3000:3000 --env-file .env charge_map
+   docker-compose build --no-cache
+   ```
+
+3. Run the Docker container:
+
+   ```bash
+   docker-compose up
    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
