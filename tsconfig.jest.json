@@ -1,0 +1,11 @@
+{
+    "extends": "./tsconfig.json", // start from your main config
+    "compilerOptions": {
+      // Overwrite some settings for Jest
+      "module": "commonjs",
+      "moduleResolution": "node",
+      // Use "react" or "react-jsx" rather than "preserve"
+      // so ts-jest can transform JSX properly in test files
+      "jsx": "react"
+    }
+  }

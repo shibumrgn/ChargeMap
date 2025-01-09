@@ -1,6 +1,15 @@
+/** @type {import('jest').Config} */
 module.exports = {
-  testEnvironment: "jest-environment-jsdom", // Enables DOM testing
+  // ...
+  testEnvironment: "jsdom",
+
   transform: {
-    "^.+\\.tsx?$": "ts-jest", // Transform TypeScript files using ts-jest
+    "^.+\\.tsx?$": [
+      "ts-jest",
+      {
+        tsconfig: "<rootDir>/tsconfig.jest.json", // path to your custom tsconfig
+      },
+    ],
   },
+  // ...
 };
